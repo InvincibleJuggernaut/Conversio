@@ -1,22 +1,22 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { Grid, Transition } from 'semantic-ui-react';
+import { Grid, Transition, Card } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
 import PostCard from '../components/PostCard';
 import PostForm from '../components/PostForm';
 import { FETCH_POSTS_QUERY } from '../util/graphql';
-import RecommendPeople from '../components/RecommendPeople';
 
-function Home() {
+function Home(props) {
   const { user } = useContext(AuthContext);
+  const userId = props.match.params.username;
   const {
     loading,
     data: { getPosts: posts } = {}
   } = useQuery(FETCH_POSTS_QUERY);
 
   return (
-    <>
+      <>
     <Grid.Row className="page-title">
         <h1>Recent Posts</h1>
     </Grid.Row>
@@ -42,7 +42,11 @@ function Home() {
           </div>
         )}
       </Grid.Column>
+      <Card.Group>
+    <Card fluid color='teal' header='BHSHHJSH' />
+    </Card.Group>
     </Grid>
+    
     </>
   );
 }
