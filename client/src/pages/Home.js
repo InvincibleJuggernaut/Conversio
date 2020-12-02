@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { Grid, Transition, Card } from 'semantic-ui-react';
+import { Grid, Transition, Header, Image } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
 import PostCard from '../components/PostCard';
@@ -15,11 +15,14 @@ function Home(props) {
     data: { getPosts: posts } = {}
   } = useQuery(FETCH_POSTS_QUERY);
 
+
   return (
-      <>
+    <>
     <Grid.Row className="page-title">
         <h1>Recent Posts</h1>
     </Grid.Row>
+    <div className="home-container">
+    <div>
     <Grid columns={1}>
       <Grid.Column className="posts">
         {user && (
@@ -41,12 +44,21 @@ function Home(props) {
           </Transition.Group>
           </div>
         )}
-      </Grid.Column>
-      <Card.Group>
-    <Card fluid color='teal' header='BHSHHJSH' />
-    </Card.Group>
-    </Grid>
-    
+        </Grid.Column>
+        </Grid>
+    </div>
+    <div>
+      <Header as='h1' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            </Header>
+            <Header as='h1' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            </Header>
+            <Header as='h1' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            </Header>
+    </div>
+    </div>
     </>
   );
 }

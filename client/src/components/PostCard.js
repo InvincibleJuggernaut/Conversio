@@ -19,6 +19,7 @@ function PostCard({
         <Image
           floated="right"
           size="mini"
+          circular
           src="https://react.semantic-ui.com/images/avatar/large/molly.png"
           as={Link} to={`/profile/${username}`}
         />

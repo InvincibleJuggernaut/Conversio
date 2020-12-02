@@ -10,7 +10,8 @@ import {
   Image,
   Icon,
   Label,
-  Transition
+  Transition,
+  Header
 } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
@@ -65,19 +66,15 @@ function SingleProfile(props) {
           <h1>Loading posts</h1>
         ) : (
           <div className="posts-container">
+  <Header as='h1' className="profile-header">
+              <Image circular src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            </Header>
+            
           <Transition.Group>
-            <Card
-              className="profile-header"
-              image="https://react.semantic-ui.com/images/avatar/large/molly.png"
-              header={userId}
-              meta={createdAt}
-              description=''
-              extra=''
-            />
             {pageOwnerPosts && 
               pageOwnerPosts.map((post) => (
                 <Grid>
-                <Grid.Column key={post.id} style={{ marginBottom: 20, marginTop: 20  }}>
+                <Grid.Column key={post.id} className="posts-grid" >
                   <PostCard post={post} />
                 </Grid.Column>
                 </Grid>

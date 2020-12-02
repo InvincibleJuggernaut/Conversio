@@ -2,8 +2,8 @@
   display: block !important;
   text-align: center !important;
   font-size: 2rem !important;
-  margin-top: 70px !important;
-  margin-bottom: 70px;
+  margin-top: 30px !important;
+  margin-bottom: 50px !important;
 }
 
 .form-container {
@@ -16,21 +16,21 @@
   background-color: #00b5ad;
 }
 
-.posts {
-  flex: 0.6;
-  justify-content: center;
-  margin: -25px 0 0 25px;
-}
-
 .posts-container {
   width: 100%;
   margin: 0 auto;
 }
-.profile-header {
-  margin: 20px;
-  padding: 20px;
+.ui.header.profile-header {
+  margin-top: 30px !important;
+  margin-bottom: 30px;
+  width: 190% !important;
 }
 
-.recommend-people {
-  float: right;
+.posts-grid {
+  marginbottom: 20px !important;
+}
+
+.home-container {
+  display: flex !important;
+  justify-content: space-between !important;
 }
