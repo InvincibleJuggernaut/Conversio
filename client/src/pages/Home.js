@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { Grid, Transition, Header, Image } from 'semantic-ui-react';
+import { Grid, Transition, Header, Image, Card } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
 import PostCard from '../components/PostCard';
@@ -14,6 +14,7 @@ function Home(props) {
     loading,
     data: { getPosts: posts } = {}
   } = useQuery(FETCH_POSTS_QUERY);
+
 
   const users = [...new Set(posts.map(item => item.username)) ]
   const total_users = Object.keys(users).length;
@@ -58,17 +59,19 @@ function Home(props) {
         </Grid.Column>
         </Grid>
     </div>
-    <div >
-    <div className="home-suggestions">
-      <Header as='h4' className="profile-header">
+    <div>
+    <div className="outer-home-container">
+      <Card className="home-suggestions">
+      <Header as='h4' >
               <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />{user1}
             </Header>
-            <Header as='h4' className="profile-header">
+            <Header as='h4'>
               <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />{user2}
             </Header>
-            <Header as='h4' className="profile-header">
+            <Header as='h4'>
               <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {user3}
             </Header>
+            </Card>
     </div>
     </div>
     </div>

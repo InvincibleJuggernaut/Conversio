@@ -34,11 +34,14 @@
   justify-content: space-between !important;
 }
 
-.home-suggestions {
-  float: right !important;
-  margin-right: 40px !important;
-}
-
 .user-container {
   width: 50%;
+}
+
+.outer-home-container {
+  margin-right: 10px !important;
+}
+
+.home-suggestions {
+  padding: 15px 15px 15px 15px !important;
 }
