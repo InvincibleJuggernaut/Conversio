@@ -65,7 +65,7 @@ function SingleProfile(props) {
         {loading ? (
           <h1>Loading posts</h1>
         ) : (
-          <div className="posts-container">
+          <div className="user-container">
   <Header as='h1' className="profile-header">
               <Image circular src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
             </Header>

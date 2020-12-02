@@ -15,6 +15,17 @@ function Home(props) {
     data: { getPosts: posts } = {}
   } = useQuery(FETCH_POSTS_QUERY);
 
+  const users = [...new Set(posts.map(item => item.username)) ]
+  const total_users = Object.keys(users).length;
+
+  for(let i = total_users-1;i>0;i--){
+    const num = Math.floor(Math.random()*(i+1));
+    [users[i], users[num]] = [users[num], users[i]];
+  }
+  const user1 = users[0];
+  const user2 = users[2];
+  const user3 = users[4];
+  
 
   return (
     <>
@@ -47,16 +58,18 @@ function Home(props) {
         </Grid.Column>
         </Grid>
     </div>
-    <div>
-      <Header as='h1' className="profile-header">
-              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+    <div >
+    <div className="home-suggestions">
+      <Header as='h4' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />{user1}
             </Header>
-            <Header as='h1' className="profile-header">
-              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            <Header as='h4' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" />{user2}
             </Header>
-            <Header as='h1' className="profile-header">
-              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
+            <Header as='h4' className="profile-header">
+              <Image circular size="mini" src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {user3}
             </Header>
+    </div>
     </div>
     </div>
     </>
