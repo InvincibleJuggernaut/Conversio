@@ -15,6 +15,8 @@ function Home(props) {
     data: { getPosts: posts } = {}
   } = useQuery(FETCH_POSTS_QUERY);
 
+
+    if(posts){
     let usersList = [...new Set(posts.map(item => item.username))];
     let totalUsers = Object.keys(usersList).length;
 
@@ -26,6 +28,7 @@ function Home(props) {
     var user1 = usersList[0];
     var user2 = usersList[2];
     var user3 = usersList[4];
+    };
 
      
 

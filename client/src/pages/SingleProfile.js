@@ -49,10 +49,11 @@ function SingleProfile(props) {
     }
   });
 
-
-  const pageOwnerPosts = posts.filter(function (f) {
+  if(posts){
+  var pageOwnerPosts = posts.filter(function (f) {
     return f.username === userId;
   });
+};
 
 
   function deletePostCallback() {
