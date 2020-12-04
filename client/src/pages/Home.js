@@ -35,6 +35,9 @@ function Home(props) {
 
   return (
     <>
+    {loading ? (
+          <h1>Loading</h1>
+        ) : (
     <div className="home-container">
     <div>
       <Grid.Row className="posts-title">
@@ -47,9 +50,7 @@ function Home(props) {
             <PostForm/>
           </Grid.Column>
         )}
-        {loading ? (
-          <h1>Loading posts</h1>
-        ) : (
+        
           <div className="posts-container">
           <Transition.Group>
             {posts &&
@@ -60,7 +61,7 @@ function Home(props) {
               ))}
           </Transition.Group>
           </div>
-        )}
+        
         </Grid.Column>
         </Grid>
     </div>
@@ -83,6 +84,7 @@ function Home(props) {
     </div>
     </div>
     </div>
+    )}
     </>
   );
 }
