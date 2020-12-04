@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { Grid, Transition, Header, Image, Card } from 'semantic-ui-react';
+import { Grid, Transition, Header, Image, Card, Dimmer, Loader } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import { AuthContext } from '../context/auth';
@@ -36,7 +36,7 @@ function Home(props) {
   return (
     <>
     {loading ? (
-          <h1>Loading</h1>
+            <Loader active/>
         ) : (
     <div className="home-container">
     <div>

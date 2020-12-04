@@ -3,15 +3,12 @@ import gql from 'graphql-tag';
 import { useQuery, useMutation } from '@apollo/react-hooks';
 import moment from 'moment';
 import {
-  Button,
-  Card,
-  Form,
   Grid,
   Image,
-  Icon,
-  Label,
   Transition,
-  Header
+  Header,
+  Dimmer,
+  Loader
 } from 'semantic-ui-react';
 
 import { AuthContext } from '../context/auth';
@@ -63,7 +60,7 @@ function SingleProfile(props) {
   let postMarkup = (
     <>
     {loading ? (
-          <h1>Loading posts</h1>
+            <Loader active/>
         ) : (
       <Grid columns={1}>
       <Grid.Column className="posts">
@@ -77,7 +74,7 @@ function SingleProfile(props) {
             {pageOwnerPosts && 
               pageOwnerPosts.map((post) => (
                 <Grid>
-                <Grid.Column key={post.id} className="posts-grid" >
+                <Grid.Column key={post.id} className="posts-grid">
                   <PostCard post={post} />
                 </Grid.Column>
                 </Grid>
