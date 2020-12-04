@@ -61,11 +61,13 @@ function SingleProfile(props) {
   }
 
   let postMarkup = (
-      <Grid columns={1}>
-      <Grid.Column className="posts">
-        {loading ? (
+    <>
+    {loading ? (
           <h1>Loading posts</h1>
         ) : (
+      <Grid columns={1}>
+      <Grid.Column className="posts">
+
           <div className="user-container">
   <Header as='h1' className="profile-header">
               <Image circular src="https://react.semantic-ui.com/images/avatar/large/molly.png" /> {userId}
@@ -82,10 +84,10 @@ function SingleProfile(props) {
               ))}
           </Transition.Group>
           </div>
-        )}
       </Grid.Column>
-
       </Grid>
+      )}
+      </>
     );
     return (
       postMarkup
