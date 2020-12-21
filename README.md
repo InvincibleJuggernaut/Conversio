@@ -1,6 +1,6 @@
 # Conversio
 <a href="https://reactjs.org/" target="_blank"><img src="https://img.shields.io/badge/MADE WITH-React-blue.svg?logo=React"></a>
-<a href="conversio.netlify.com/" target="_blank"><img src="https://img.shields.io/badge/Status-LIVE-success" height="20"></a>
+<a href="https://conversio.netlify.com/" target="_blank"><img src="https://img.shields.io/badge/Status-LIVE-success" height="20"></a>
 
 <h2> Introduction </h2>
 
