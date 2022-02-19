@@ -4,7 +4,7 @@
 
 <h2> Introduction </h2>
 
-<p> This is a basic social media app created using the MERNG stack after following <a href="https://github.com/hidjou">@hidjou</a>'s tutorial. Furthermore, some additional features have been added namely profile section for all the users with their previous posts and a suggestion section for suggesting other users. I am not great with JavaScript, so kindly ignore the redundant and messy code. The app is live at <a href="https://www.conversio.netlify.com/">Conversio</a>.
+<p> This is a basic social media app created using the MERNG stack after following <a href="https://github.com/hidjou">@hidjou</a>'s tutorial. Furthermore, some additional features have been added namely profile section for all the users with their previous posts and a suggestion section for suggesting other users. I am not great with JavaScript, so kindly ignore the redundant and messy code. The app is live at <a href="https://conversio.netlify.com/">Conversio</a>.
 
 <h2>Installation</h2>
 
